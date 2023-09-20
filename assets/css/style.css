@@ -104,27 +104,31 @@ body {
 }
 
 .main__title {
-    margin-left: 0.5rem;
-    font-size: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    font-size: 10rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    justify-self: end;
+    cursor: default;
 }
 
 .main__body {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 .main__item {
     display: flex;
     align-items: end;
     gap: .5rem;
-    margin-top: .5rem;
+    margin-top: 1em;
 }
 
 a {
     color: inherit;
-    letter-spacing: 0.03em;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    font-weight: 500;
     transition: ease-in-out .2s;
 }
 
@@ -132,15 +136,15 @@ a:hover {
     color: #ead98e;
 }
 
-span {
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
+.main__item>span {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     color: #83773A;
 }
 
 .blob {
-    background: linear-gradient(#aa9a4b53 35%, #83773ad9);
+    background: linear-gradient(#1C1A0C 35%, #83773ad9);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -148,15 +152,22 @@ span {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
+    filter: blur(4rem);
     z-index: -1;
-    filter: blur(100px);
-    transition: linear .1s;
+    transition: linear .3s;
     animation: rotate linear 5s infinite;
-    mix-blend-mode: difference;
 }
 
 .boom {
     position: absolute;
     top: 10%;
     right: 10%;
+}
+
+.explosion {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: -2;
 }
