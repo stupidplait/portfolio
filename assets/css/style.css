@@ -1,0 +1,162 @@
+html {
+    color-scheme: dark;
+}
+
+html,
+body {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: normal;
+    font-family: 'Benzin';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+:focus,
+:active,
+a:focus,
+a:active {
+    outline: none;
+}
+
+header,
+nav,
+footer {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: inherit;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('../fonts/Benzin-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('../fonts/Benzin-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('../fonts/Benzin-Semibold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('../fonts/Benzin-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Benzin';
+    src: url('../fonts/Benzin-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: #19160B;
+    color: #F3F0E3;
+}
+
+.main__title {
+    margin-left: 0.5rem;
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    justify-self: end;
+}
+
+.main__body {
+    margin-left: 0.5rem;
+}
+
+.main__item {
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+a {
+    color: inherit;
+    letter-spacing: 0.03em;
+    transition: ease-in-out .2s;
+}
+
+a:hover {
+    color: #ead98e;
+}
+
+span {
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #83773A;
+}
+
+.blob {
+    background: linear-gradient(#aa9a4b53 35%, #83773ad9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+    transition: linear .1s;
+    animation: rotate linear 5s infinite;
+    mix-blend-mode: difference;
+}
+
+.boom {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}

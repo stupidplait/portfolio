@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <ul class="main__body">
+        <li class="main__item">
+            <a href="http://z680.pautinaweb.ru/learn/php2/sm17">moter</a>
+            <span>FIGMA, RESPONSIVE HTML, CSS, JS, PHP</span>
+        </li>
+        <li class="main__item">
+            <a href="http://z680.pautinaweb.ru/learn/benedi">benedi</a>
+            <span>FIGMA, HTML, CSS, JS, PHP</span>
+        </li>
+        <li class="main__item">
+            <a href="https://stupidplait.github.io/chin-chin">chin-chin</a>
+            <span>FIGMA, HTML, CSS, PHP</span>
+        </li>
+        <li class="main__item">
+            <a href="http://z680.pautinaweb.ru/learn/php/sm21">sadovod</a>
+            <span>FIGMA, HTML, CSS, PHP</span>
+        </li>
+        <li class="main__item">
+            <a href="https://stupidplait.github.io/bagat">bagat</a>
+            <span>RESPONSIVE HTML, CSS</span>
+        </li>
+    </ul>
+    <h1 class="main__title">KUZMIN RUSLAN</h1>
+    <div class="blob">
+        <div class="blur"></div>
+    </div>
+    <script>
+        document.onmousemove = function (event) {
+            let blob = document.querySelector('.blob');
+
+            blob.style.left = `${event.clientX - blob.offsetWidth / 2}px`;
+            blob.style.top = `${event.clientY - blob.offsetHeight / 2}px`;
+        }
+    </script>
+</body>
+
+</html>
