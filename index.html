@@ -11,6 +11,10 @@
 <body>
     <ul class="main__body">
         <li class="main__item">
+            <a target="_blank" href="http://z680.pautinaweb.ru/learn/fusion/">fusion</a>
+            <span>FIGMA, RESPONSIVE HTML, CSS, JS, PHP</span>
+        </li>
+        <li class="main__item">
             <a target="_blank" href="http://z680.pautinaweb.ru/learn/php2/sm17">moter</a>
             <span>FIGMA, RESPONSIVE HTML, CSS, JS, PHP</span>
         </li>
@@ -49,8 +53,10 @@
         document.onmousemove = function (event) {
             let blob = document.querySelector('.blob');
 
-            blob.style.left = `${event.clientX - blob.offsetWidth / 2 + 20}px`;
-            blob.style.top = `${event.clientY - blob.offsetHeight / 2 + 20}px`;
+            blob.animate({
+                left: event.clientX + 'px',
+                top: event.clientY + 'px',
+            }, {duration: 500, fill: 'forwards', easing: 'ease-in-out'});
         };
 
         document.querySelector('.main__title').onselectstart = () => false;
