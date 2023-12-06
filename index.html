@@ -54,9 +54,9 @@
             let blob = document.querySelector('.blob');
 
             blob.animate({
-                left: event.clientX + 'px',
-                top: event.clientY + 'px',
-            }, {duration: 500, fill: 'forwards', easing: 'ease-in-out'});
+                left: event.clientX - blob.offsetWidth / 2 + 'px',
+                top: event.clientY - blob.offsetHeight / 2 + 'px',
+            }, {duration: 500, fill: 'forwards', easing: 'linear'});
         };
 
         document.querySelector('.main__title').onselectstart = () => false;
